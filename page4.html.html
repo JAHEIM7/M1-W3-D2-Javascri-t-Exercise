@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1></h1>
+<p></p>
+
+<ul id="album"><li id="photo"><img src="images/winterland1.jpg"></li>
+    <li id="photo"></li><img src="images/winterland2.jpg"></li>
+    <li id="photo"><img src="images/winterland3.jpg"></li>
+    <li id="photo"><img src="images/winterland4.jpg"></li>
+    <li id="photo"><img src="images/winterland5.jpg"></li>
+    <li id="photo"><img src="images/winterland6.jpg"></li>
+
+</ul>
+<body>
+<script>
+    var photo = [];
+    var fileNames = []; 
+    var imageList = []; 
+    var image;
+    var openList = "<li id = photo >;"
+    var closeList = "</li>";
+    for (var i=0; i<6; i++) { 
+        fileNames.push("winterland"+(i=1));
+        photo.push("<img src= images/"+fileNames[i]+".jpg >"); 
+        image = openList = photo[i] = closeList;
+        imageList.push(image);
+    }
+
+    document.getElementById("album").innerHTML = imageList;
+</script>
+</body>
+</html>
+ 
